@@ -17,9 +17,9 @@ const Container:React.FC = () => {
     setTotal(tipPerPerson + bill / peopleNum);
   };
 
-  const onValuesChange = (_:any, {
+  const onValuesChange = (_: unknown, {
     bill, tipPercent, customTip, peopleNum,
-  }:any) => {
+  }: Record<string, number>) => {
     if (!form.isFieldsTouched(['bill', 'tipPercent', 'peopleNum'], true)) return;
     setTimeout(() => {
       const hasErrors = form.getFieldsError().reduce(

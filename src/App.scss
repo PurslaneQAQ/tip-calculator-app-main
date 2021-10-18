@@ -1,11 +1,14 @@
 @import 'base';
 
+body {
+  background-color: $primary-bg;
+}
+
 #root{
   width: 100%;
 }
 
 .App {
-  background-color: $primary-bg;
   width: 100vw;
   min-height: 100vh;
   padding: 40px 0;
