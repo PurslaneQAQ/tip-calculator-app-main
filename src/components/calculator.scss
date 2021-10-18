@@ -1,0 +1,111 @@
+@import '../base';
+
+#calculator {
+  padding: 24px; 
+  text-align: left;
+  
+  label {
+    color: $primary-dark-color;
+  }
+  
+  input {
+    background-color: inherit;
+    text-align: right;
+    color: $input-color;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .ant-input-affix-wrapper{
+    background-color: $input-background;
+    border-radius: 4px;
+    border: none;
+    padding: 14px 16px;
+  }
+  
+  .ant-form-item-has-error .ant-input-affix-wrapper{
+    background-color: inherit;
+    box-shadow: 0 0 0 1.5px $error-color;
+  }
+  
+  .ant-input-affix-wrapper:focus,
+  .ant-input-affix-wrapper-focused,
+  .custom-tip input:focus {
+    box-shadow: 0 0 0 1.5px $input-focus-outline;
+  }
+  
+  .ant-input-prefix,
+  input::placeholder {
+    color: #A3BFBF;
+  }
+  
+  .ant-form-item-explain {
+    position: absolute;
+    top: -30px;
+    right: 0;
+  }
+  
+  .ant-form-item:last-of-type{
+    margin-bottom: 0;
+  }
+  
+  .ant-radio-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .ant-radio-button-wrapper,
+  .custom-tip input {
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+  }
+  
+  .custom-tip input::placeholder {
+    text-align: center;
+  }
+  
+  .ant-radio-button-wrapper{
+    color: white;
+    display: flex;
+    background-color: $primary-dark-color;
+  
+    &::before,
+    &:focus::before,
+    &:hover::before {
+      background-color: transparent;
+    }
+  }
+  .ant-radio-button-wrapper-checked {
+    background-color: $primary-light-color;
+    color: $primary-dark-color;
+  }
+  
+  .custom-tip {
+    background-color: transparent;
+    padding: 0;
+    input {
+      background-color: $input-background;
+    }
+  }
+
+  @media only screen and (min-width: 720px) {
+    & {
+      padding: 48px; 
+      padding-right: 36px;
+    }
+    div.ant-radio-group {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    label.ant-radio-button-wrapper,
+    label.custom-tip input {
+      height: 50px;
+    }
+  }
+}
+

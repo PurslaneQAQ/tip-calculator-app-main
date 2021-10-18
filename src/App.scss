@@ -1,0 +1,46 @@
+@import 'base';
+
+body {
+  background-color: $primary-bg;
+}
+
+#root{
+  width: 100%;
+}
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $primary-dark-color;
+  font-family: $font-stack;
+  font-weight: 600;
+
+}
+
+.App-logo {
+  width: 96px;
+  max-width: 25vw;;
+}
+
+
+/* Disable spin for number input */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/***********************************/
+
